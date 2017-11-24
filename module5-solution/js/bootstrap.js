@@ -8,10 +8,6 @@ if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
 }
 
-if (typeof jQuery === 'undefined') {
-  throw new Error('Bootstrap\'s JavaScript requires jQuery')
-}
-
 +function ($) {
   'use strict';
   var version = $.fn.jquery.split(' ')[0].split('.')
@@ -39,8 +35,8 @@ if (typeof jQuery === 'undefined') {
     var el = document.createElement('bootstrap')
 
     var transEndEventNames = {
-WebkitTransition : 'webkitTransitionEnd',
-MozTransition    : 'transitionend',
+      WebkitTransition : 'webkitTransitionEnd',
+      MozTransition    : 'transitionend',
       OTransition      : 'oTransitionEnd otransitionend',
       transition       : 'transitionend'
     }
@@ -48,8 +44,8 @@ MozTransition    : 'transitionend',
     for (var name in transEndEventNames) {
       if (el.style[name] !== undefined) {
         return { end: transEndEventNames[name] }
-}
-}
+      }
+    }
 
     return false // explicit for ie8 (  ._.)
   }
@@ -1815,8 +1811,9 @@ MozTransition    : 'transitionend',
     $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
     $tip.find('.popover-content').children().detach().end()[ // we use append for html objects to maintain js events
       this.options.html ? (typeof content == 'string' ? 'html' : 'append') : 'text'
-](content)
-$tip.removeClass('fade top bottom left right in')
+    ](content)
+
+    $tip.removeClass('fade top bottom left right in')
 
     // IE8 doesn't accept hiding via the `:empty` pseudo selector, we have to do
     // this manually by checking the contents.

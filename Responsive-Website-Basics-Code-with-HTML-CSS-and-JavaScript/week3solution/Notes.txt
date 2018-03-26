@@ -1,0 +1,9 @@
+== 2018-03-2 ==
+- this week's goals:
+	- write simple JS programs
+	- write programs that can respond to user input such as clicking HTML elements
+	- use JS functions
+	- use JQuery to manipulate web pages
+	- write own JS functions including anonymous functions
+- "$" symbol is shorthand for writing "jquery"
+- "$(argument)": the argument here is the CSS selector 
